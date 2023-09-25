@@ -54,8 +54,8 @@ const RightSideBar = () => {
                 <li
                   className={
                     place
-                      ? "border-b-2 border-solid px-5 py-[2px]  bg-orange-100"
-                      : "border-b-2 border-solid px-5 py-[2px]  bg-slate-100"
+                      ? 'w-[180px] text-black flex justify-between items-center py-1 px-2 cursor-pointer  after:content-[""] after:p-[1px] after:py-2 after:w-1 after:rounded-md after:bg-orange-400 after:h-5 after:block '
+                      : "w-[180px] flex justify-between items-center py-1  cursor-pointer  px-2"
                   }
                   onClick={handlePlace}
                 >
@@ -64,8 +64,8 @@ const RightSideBar = () => {
                 <li
                   className={
                     notplace
-                      ? "border-b-2 border-solid px-5 py-[2px]  bg-orange-100 scrollbar overflow-x-scroll scrollbar-none whitespace-nowrap"
-                      : "border-b-2 border-solid px-5 py-[2px]  bg-slate-100 scrollbar overflow-x-scroll scrollbar-none whitespace-nowrap"
+                      ? 'w-[180px] text-black flex justify-between items-center py-1 px-2 cursor-pointer  after:content-[""] after:p-[1px] after:py-2 after:w-1 after:rounded-md after:bg-orange-400 after:h-5 after:block '
+                      : "w-[180px] flex justify-between items-center py-1  cursor-pointer  px-2"
                   }
                   onClick={handleNotPlace}
                 >
@@ -74,8 +74,8 @@ const RightSideBar = () => {
                 <li
                   className={
                     tool
-                      ? "border-b-2 border-solid px-5 py-[2px]  bg-orange-100"
-                      : "border-b-2 border-solid px-5 py-[2px]  bg-slate-100"
+                      ? 'w-[180px] text-black flex justify-between items-center py-1 px-2 cursor-pointer  after:content-[""] after:p-[1px] after:py-2 after:w-1 after:rounded-md after:bg-orange-400 after:h-5 after:block '
+                      : "w-[180px] flex justify-between items-center py-1  cursor-pointer  px-2"
                   }
                   onClick={handleTool}
                 >
@@ -84,8 +84,8 @@ const RightSideBar = () => {
                 <li
                   className={
                     nottool
-                      ? "border-b-2 border-solid px-5 py-[2px]  bg-orange-100"
-                      : "border-b-2 border-solid px-5 py-[2px]  bg-slate-100"
+                      ? 'w-[180px] text-black flex justify-between items-center py-1 px-2 cursor-pointer  after:content-[""] after:p-[1px] after:py-2 after:w-1 after:rounded-md after:bg-orange-400 after:h-5 after:block '
+                      : "w-[180px] flex justify-between items-center py-1  cursor-pointer  px-2"
                   }
                   onClick={handleNotTool}
                 >
@@ -94,8 +94,8 @@ const RightSideBar = () => {
                 <li
                   className={
                     !tarea
-                      ? "border-b-2 border-solid px-5 py-[2px]  bg-orange-100 scrollbar overflow-x-scroll scrollbar-none whitespace-nowrap"
-                      : "border-b-2 border-solid px-5 py-[2px]  bg-slate-100 scrollbar overflow-x-scroll scrollbar-none whitespace-nowrap"
+                      ? 'w-[180px] text-black flex justify-between items-center py-1 px-2 cursor-pointer  after:content-[""] after:p-[1px] after:py-2 after:w-1 after:rounded-md after:bg-orange-400 after:h-5 after:block '
+                      : "w-[180px] flex justify-between items-center py-1  cursor-pointer  px-2"
                   }
                   onClick={handleArea}
                 >
@@ -109,8 +109,8 @@ const RightSideBar = () => {
             <div
               className={
                 disabled
-                  ? "border-b-2 border-solid bg-orange-400 text-white flex justify-around items-center py-1 rounded-tl-full rounded-bl-full poppins"
-                  : "border-b-2 border-solid flex justify-around items-center py-1 rounded-tl-full rounded-bl-full poppins"
+                  ? "border-b-2 border-solid bg-orange-400 text-white flex justify-around items-center py-1 rounded-tl-full rounded-bl-full cursor-pointer poppins"
+                  : "border-b-2 border-solid flex justify-around items-center py-1  rounded-tl-full rounded-bl-full cursor-pointer poppins"
               }
               onClick={handleDisabled}
             >
@@ -122,8 +122,8 @@ const RightSideBar = () => {
                 <li
                   className={
                     place
-                      ? "border-b-2 border-solid px-5 py-[2px]  bg-orange-100 scrollbar overflow-x-scroll scrollbar-none whitespace-nowrap"
-                      : "border-b-2 border-solid px-5 py-[2px]  bg-slate-100 scrollbar overflow-x-scroll scrollbar-none whitespace-nowrap"
+                      ? 'w-[180px] text-black flex justify-between items-center py-1 px-2 cursor-pointer  after:content-[""] after:p-[1px] after:py-2 after:w-1 after:rounded-md after:bg-orange-400 after:h-5 after:block '
+                      : "w-[180px] flex justify-between items-center py-1  cursor-pointer  px-2"
                   }
                   onClick={handlePlace}
                 >
@@ -132,8 +132,8 @@ const RightSideBar = () => {
                 <li
                   className={
                     notplace
-                      ? "border-b-2 border-solid px-5 py-[2px]  bg-orange-100 scrollbar overflow-x-scroll scrollbar-none whitespace-nowrap"
-                      : "border-b-2 border-solid px-5 py-[2px]  bg-slate-100 scrollbar overflow-x-scroll scrollbar-none whitespace-nowrap"
+                      ? 'w-[180px] text-black flex justify-between items-center py-1 px-2 cursor-pointer  after:content-[""] after:p-[1px] after:py-2 after:w-1 after:rounded-md after:bg-orange-400 after:h-5 after:block '
+                      : "w-[180px] flex justify-between items-center py-1  cursor-pointer  px-2"
                   }
                   onClick={handleNotPlace}
                 >
@@ -142,8 +142,8 @@ const RightSideBar = () => {
                 <li
                   className={
                     tool
-                      ? "border-b-2 border-solid px-5 py-[2px]  bg-orange-100 scrollbar overflow-x-scroll scrollbar-none whitespace-nowrap"
-                      : "border-b-2 border-solid px-5 py-[2px]  bg-slate-100 scrollbar overflow-x-scroll scrollbar-none whitespace-nowrap"
+                      ? 'w-[180px] text-black flex justify-between items-center py-1 px-2 cursor-pointer  after:content-[""] after:p-[1px] after:py-2 after:w-1 after:rounded-md after:bg-orange-400 after:h-5 after:block '
+                      : "w-[180px] flex justify-between items-center py-1  cursor-pointer  px-2"
                   }
                   onClick={handleTool}
                 >
@@ -152,8 +152,8 @@ const RightSideBar = () => {
                 <li
                   className={
                     nottool
-                      ? "border-b-2 border-solid px-5 py-[2px]  bg-orange-100 scrollbar overflow-x-scroll scrollbar-none whitespace-nowrap"
-                      : "border-b-2 border-solid px-5 py-[2px]  bg-slate-100 scrollbar overflow-x-scroll scrollbar-none whitespace-nowrap"
+                      ? 'w-[180px] text-black flex justify-between items-center py-1 px-2 cursor-pointer  after:content-[""] after:p-[1px] after:py-2 after:w-1 after:rounded-md after:bg-orange-400 after:h-5 after:block '
+                      : "w-[180px] flex justify-between items-center py-1  cursor-pointer  px-2"
                   }
                   onClick={handleNotTool}
                 >
@@ -162,8 +162,8 @@ const RightSideBar = () => {
                 <li
                   className={
                     !tarea
-                      ? "border-b-2 border-solid px-5 py-[2px]  bg-orange-100 scrollbar overflow-x-scroll scrollbar-none whitespace-nowrap"
-                      : "border-b-2 border-solid px-5 py-[2px]  bg-slate-100 scrollbar overflow-x-scroll scrollbar-none whitespace-nowrap"
+                      ? 'w-[180px] text-black flex justify-between items-center py-1 px-2 cursor-pointer  after:content-[""] after:p-[1px] after:py-2 after:w-1 after:rounded-md after:bg-orange-400 after:h-5 after:block '
+                      : "w-[180px] flex justify-between items-center py-1  cursor-pointer  px-2"
                   }
                   onClick={handleArea}
                 >

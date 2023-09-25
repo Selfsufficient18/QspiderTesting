@@ -201,7 +201,7 @@ const LoginPage = () => {
                 <Link
                   type="button"
                   className=" font-sans bg-orange-500 hover:bg-orange-700 text-white rounded-sm p-2 flex justify-center"
-                  to="/signup"
+                  to="/text/signup"
                 >
                   <span className="flex gap-2 justify-center items-center">
                     <span>Register</span>

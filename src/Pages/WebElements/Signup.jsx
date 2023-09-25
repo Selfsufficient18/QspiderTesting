@@ -45,7 +45,7 @@ const Signup = () => {
         },
         position:''
       });
-        navigate("/login");
+        navigate("/text/login");
   };
 
 
@@ -212,7 +212,7 @@ const Signup = () => {
                     Register
                   </button>
                   <Link
-                    to="/login"
+                    to="/text/login"
                     className="text-[12px] font-sans font-bold text-slate-500 relative top-3 hover:text-slate-700 cursor-pointer"
                   >
                     Already have an account ? Login Now
@@ -220,7 +220,7 @@ const Signup = () => {
                   <Link
                     type="button"
                     className="bg-orange-500 hover:bg-orange-700 text-white py-2 px-4 rounded"
-                    to="/login"
+                    to="/text/login"
                   >
                     <span className="flex gap-2 justify-center items-center">
                       <span>

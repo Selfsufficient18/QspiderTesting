@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { IoCaretDown, IoCaretUp } from "react-icons/io5";
 
 //! importing icons from the assets
@@ -34,9 +34,9 @@ const SidebarBody = () => {
       icon: "",
       linkTo: "/",
       subList: [
-        { subliName: "Text Box", subliIcon: textbox, subliTo: "", path: "" },
+        { subliName: "Text Box", subliIcon: textbox, subliTo: "", path: "text" },
         { subliName: "Button", subliIcon: button, subliTo: "", path: "button" },
-        { subliName: "Link", subliIcon: external, subliTo: "" },
+        { subliName: "Link", subliIcon: external, subliTo: "", path:"link" },
         {
           subliName: "Web Table",
           subliIcon: table,
@@ -147,16 +147,17 @@ const SidebarBody = () => {
                       {linkData[activeTab].subList.map((subEle, index) => (
                         <li
                           key={index}
-                          className={` ${
-                            index === selectedSublist
-                              ? 'before:content-[""] before:p-[1px] before:py-2 before:w-1 before:rounded-md before:bg-orange-400 before:h-5 before:block before:absolute'
-                              : ""
-                          } flex items-center`}
+                          className="no-use"
                           onClick={() => handleSublistItemClick(index)}
                         >
-                          <Link
+                          <NavLink
                             to={`/${subEle.path}`}
-                            className="ps-3 pe-8 py-1 font-semibold flex items-center justify-between w-full"
+                            // className="ps-3 pe-8 py-1 font-semibold flex items-center justify-between w-full"
+                            className={({ isActive }) =>
+                              isActive
+                                ? 'before:content-[""] before:p-[1px] before:py-2 before:w-1 before:rounded-md before:bg-orange-400 before:h-5 before:block before:absolute before:left-[35px] flex items-center ps-3 pe-8 py-1 font-semibold justify-between w-full'
+                                : "ps-3 pe-8 py-1 font-semibold flex items-center justify-between w-full "
+                            }
                           >
                             <section>{subEle.subliName}</section>
                             <section className="ps-3">
@@ -166,7 +167,7 @@ const SidebarBody = () => {
                                 alt=""
                               />
                             </section>
-                          </Link>
+                          </NavLink>
                         </li>
                       ))}
                     </ul>

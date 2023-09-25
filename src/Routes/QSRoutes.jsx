@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes, createBrowserRouter } from "react-router-dom";
 import HomePage from "../Pages/HomePage";
 import Text from "./../Pages/WebElements/Text";
 import Button from "./../Pages/WebElements/Button";
@@ -18,18 +18,127 @@ import RadioButton from "../Pages/WebElements/RadioButton";
 import RadioButtons from "../Pages/WebElements/Radio/RadioButtons";
 import CheckBox from "../Pages/WebElements/CheckBox";
 import Checks from "../Pages/WebElements/Checkbox/Checks";
+import LinkMain from "../Pages/WebElements/Link/LinkMain";
+import LinkFirst from "../Pages/WebElements/Link/LinkFirst";
+import LinkSecond from "../Pages/WebElements/Link/LinkSecond";
+
+// let router = createBrowserRouter([
+//   {
+//     element: <HomePage />,
+//     path: "/",
+//     children: [
+//       {
+//         element: <Text />,
+//         path: "/",
+//         children: [
+//           {
+//             index: true,
+//             element: <Signup />,
+//           },
+//           {
+//             path: "/login",
+//             element: <LoginPage />,
+//           },
+//           {
+//             path: "/signup",
+//             element: <Signup />,
+//           },
+//         ],
+//       },
+//       {
+//         path: "/button",
+//         element: <ButtonMain />,
+//         children: [
+//           {
+//             index: true,
+//             element: <ButtonDefault />,
+//           },
+//           {
+//             path: "/buttonRightClick",
+//             element: <ButtonRightClick />,
+//           },
+//           {
+//             path: "/buttonDoubleClick",
+//             element: <ButtonDoubleClick />,
+//           },
+//           {
+//             path: "/buttonSubmitClick",
+//             element: <ButtonSubmitClick />,
+//           },
+//           {
+//             path: "/buttonDisabled",
+//             element:<ButtonDisabled />
+//           },
+//         ],
+//       },
+//       {
+//         path: "/table",
+//         children: <Table />,
+//         children: [
+//           {
+//             index: true,
+//             element:<StaticTable />
+//           },
+//           {
+//             path: "/table/static-table",
+//             element:<StaticTable />,
+//           },
+//           {
+//             path: "/table/dyamic-table",
+//             element:<DynamicTable />
+//           }
+//         ]
+//       },
+//       {
+//         path: "/radio",
+//         element: <RadioButton />,
+//         children: [
+//           {
+//             index: true,
+//             element:<RadioButtons />
+//           }
+//         ]
+//       },
+//       {
+//         path: "/checkbox",
+//         element: <CheckBox />,
+//         children: [
+//           {
+//             index: true,
+//             element:<Checks />
+//           }
+//         ]
+//       },
+//       {
+//         path: "/link",
+//         element: <LinkMain />,
+//         children: [
+//           {
+//             index: true,
+//             element:<LinkFirst />
+//           },
+//           {
+//             path: "/link/second-link",
+//             element:<LinkSecond />
+//           }
+//         ]
+//       }
+//     ],
+//   },
+// ]);
 
 const QSRoutes = () => {
   
   return (
     <div>
       <Routes>
-        <Route path="/" element={<HomePage />}>
-          <Route path="/" element={<Text />}>
+        <Route path="/" element={<HomePage />}> 
+          <Route path="/text" element={<Text />}>
             <Route index element={<Signup />}></Route>
-            <Route path="/login" element={<LoginPage />}></Route>
-            <Route path="/signup" element={<Signup />}></Route>
+            <Route path="/text/login" element={<LoginPage />}></Route>
+            <Route path="/text/signup" element={<Signup />}></Route>
           </Route>
+
           <Route path="/button" element={<ButtonMain />}>
             <Route index element={<ButtonDefault />} />
             <Route path="buttonRightClick" element={<ButtonRightClick />} />
@@ -37,6 +146,9 @@ const QSRoutes = () => {
             <Route path="buttonSubmitClick" element={<ButtonSubmitClick />} />
             <Route path="buttonDisabled" element={<ButtonDisabled />} />
           </Route>
+
+          
+
           <Route path="/table" element={<Table />}>
             <Route index element={<StaticTable />}></Route>
             <Route path="/table/static-table" element={<StaticTable />}></Route>
@@ -45,12 +157,22 @@ const QSRoutes = () => {
               element={<DynamicTable />}
             ></Route>
           </Route>
+
+
+
           <Route path="/radio" element={<RadioButton />}>
             <Route index element={<RadioButtons />}></Route>
           </Route>
+
           <Route path="/checkbox" element={<CheckBox />}>
             <Route index element={<Checks />}></Route>
           </Route>
+
+          <Route path="/link" element={<LinkMain />}>
+            <Route index  element={<LinkFirst />}></Route>
+            <Route path="/link/second-link" element={<LinkSecond />}></Route>
+          </Route>
+
         </Route>
       </Routes>
     </div>

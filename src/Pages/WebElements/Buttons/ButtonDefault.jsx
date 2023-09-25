@@ -153,10 +153,10 @@ const ButtonDefault = () => {
                   1
                 </button>
                 <button
-                  className={`rounded-md mx-1 px-5 py-2 bg-orange-600 text-white font-bold ${
+                  className={`active:bg-green-400 transition-all duration-300 active:border-green-400 rounded-md mx-1 px-5 py-2 bg-orange-300 border border-orange-600 text-black font-bold ${
                     rate2
-                      ? "bg-gradient-to-r from-orange-300 to-orange-500 "
-                      : ""
+                      ? "border-green-400 border transition-all duration-300 bg-green-300"
+                      : "transition-all duration-300"
                   }`}
                   onClick={() => {
                     setRate1(false);
