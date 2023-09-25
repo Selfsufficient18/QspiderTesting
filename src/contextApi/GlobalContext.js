@@ -94,7 +94,17 @@ const GlobalContext = ({ children }) => {
   });
 
   let handleEdit = () => {};
-  let handleUpdate = () => {};
+  let handleUpdate = () => { };
+  
+
+  let [scClicked, setSclciked] = useState(false);
+ 
+
+  let [getSc, setGetsc] = useState("How to enter data into Text field ?");
+  let handleGetsc = (data) => {
+    setGetsc(data);
+    setSclciked(!scClicked);
+  }
 
   return (
     <ContextProvider.Provider
@@ -116,6 +126,9 @@ const GlobalContext = ({ children }) => {
         bootcamps,
         handleEdit,
         handleUpdate,
+        getSc,
+        handleGetsc,
+        scClicked,
       }}
     >
       {children}

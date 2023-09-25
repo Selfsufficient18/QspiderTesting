@@ -1,67 +1,67 @@
-import React, { useContext, useEffect, useState } from 'react'
-import sign_img from './sign.avif'
-import { Link, useNavigate } from 'react-router-dom';
-import { AiOutlineArrowLeft } from 'react-icons/ai';
-import { ContextProvider } from '../../contextApi/GlobalContext';
-import toast from 'react-hot-toast';
+import React, { useContext, useEffect, useState } from "react";
+import sign_img from "./sign.avif";
+import { Link, useNavigate } from "react-router-dom";
+import { AiOutlineArrowLeft } from "react-icons/ai";
+import { ContextProvider } from "../../contextApi/GlobalContext";
+import toast from "react-hot-toast";
 
 const Signup = () => {
-    let [state, setState] = useState({
-      name: "",
-      email: "",
-      password: "",
-    });
+  let [state, setState] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
 
-    let [loading, setLoading] = useState(false);
+  let [loading, setLoading] = useState(false);
 
-    let [btn, setBtn] = useState(false);
+  let [btn, setBtn] = useState(false);
 
-    useEffect(() => {
-      if (state.name && state.email && state.password) {
-        setBtn(false);
-      } else {
-        setBtn(true);
-      }
-    });
+  useEffect(() => {
+    if (state.name && state.email && state.password) {
+      setBtn(false);
+    } else {
+      setBtn(true);
+    }
+  });
 
-    let { name, email, password } = state;
+  let { name, email, password } = state;
 
-    let handleChange = e => {
-      let { name, value } = e.target;
-      setState({ ...state, [name]: value });
-    };
-
-    let navigate = useNavigate();
-
-    let handleSubmit = e => {
-      e.preventDefault();
-      console.log("signed in");
-      toast("sign in succesfull", {
-        icon: "✅",
-        style: {
-          borderRadius: "10px",
-          background: "#333",
-          color: "#fff",
-        },
-        position:''
-      });
-        navigate("/text/login");
+  let handleChange = e => {
+    let { name, value } = e.target;
+    setState({ ...state, [name]: value });
   };
 
+  let navigate = useNavigate();
 
-    let {
-      place,
-      handlePlace,
-      notplace,
-      handleNotPlace,
-      tool,
-      handleTool,
-      nottool,
-      handleNotTool,
-      tarea,
-      handleArea,
-      disabled,
-    } = useContext(ContextProvider);
+  let handleSubmit = e => {
+    e.preventDefault();
+    console.log("signed in");
+    toast("sign in succesfull", {
+      icon: "✅",
+      style: {
+        borderRadius: "10px",
+        background: "#333",
+        color: "#fff",
+      },
+      position: "",
+    });
+    navigate("/text/login");
+  };
+
+  let {
+    place,
+    handlePlace,
+    notplace,
+    handleNotPlace,
+    tool,
+    handleTool,
+    nottool,
+    handleNotTool,
+    tarea,
+    handleArea,
+    disabled,
+    getSc,
+  } = useContext(ContextProvider);
 
   return (
     <>
@@ -77,9 +77,11 @@ const Signup = () => {
             </picture>
           </figure>
 
+          {/* this will change */}
           <section className="absolute top-[-10px] left-[10%] bg-orange-500 w-[80%] p-[8px] px-10 rounded-3xl text-white font-bold capitalize text-[14px] flex justify-center items-center">
-            <p>How to enter data into Text field ?</p>
+            <p>{getSc}</p>
           </section>
+          {/* ---------------- */}
         </aside>
         <aside className="p-2 basis-[60%] bg-white h-fit">
           <div className="w-full rounded-lg">
@@ -237,6 +239,6 @@ const Signup = () => {
       </article>
     </>
   );
-}
+};
 
-export default Signup
+export default Signup;

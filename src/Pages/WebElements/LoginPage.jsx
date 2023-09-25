@@ -18,19 +18,21 @@ import toast from "react-hot-toast";
 const LoginPage = () => {
   let navigate = useNavigate();
 
-      let {
-        place,
-        handlePlace,
-        notplace,
-        handleNotPlace,
-        tool,
-        handleTool,
-        nottool,
-        handleNotTool,
-        tarea,
-        handleArea,
-        disabled
-      } = useContext(ContextProvider);
+  let {
+    place,
+    handlePlace,
+    notplace,
+    handleNotPlace,
+    tool,
+    handleTool,
+    nottool,
+    handleNotTool,
+    tarea,
+    handleArea,
+    disabled,
+    handleGetsc,
+    getSc,
+  } = useContext(ContextProvider);
 
   let [state, setState] = useState({
     email: "",
@@ -89,7 +91,7 @@ const LoginPage = () => {
         </figure>
 
         <section className="absolute top-[-10px] left-[10%] bg-orange-500 w-[80%] p-[8px] px-10 rounded-3xl text-white font-bold capitalize text-[14px] flex justify-center items-center">
-          <p>How to enter data into Text field ?</p>
+          <p>{getSc}</p>
         </section>
       </aside>
       <aside className="p-2 basis-[60%] bg-white h-fit">
