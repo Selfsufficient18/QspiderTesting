@@ -37,10 +37,25 @@ const SidebarBody = () => {
         { subliName: "Text Box", subliIcon: textbox, subliTo: "", path: "" },
         { subliName: "Button", subliIcon: button, subliTo: "", path: "button" },
         { subliName: "Link", subliIcon: external, subliTo: "" },
-        { subliName: "Web Table", subliIcon: table, subliTo: "", path:"table"},
+        {
+          subliName: "Web Table",
+          subliIcon: table,
+          subliTo: "",
+          path: "table",
+        },
         { subliName: "Dropdown", subliIcon: dropdown, subliTo: "" },
-        { subliName: "Check Box", subliIcon: check, subliTo: "" },
-        { subliName: "Radio Button", subliIcon: radio, subliTo: "" },
+        {
+          subliName: "Check Box",
+          subliIcon: check,
+          subliTo: "",
+          path: "checkbox",
+        },
+        {
+          subliName: "Radio Button",
+          subliIcon: radio,
+          subliTo: "",
+          path: "radio",
+        },
       ],
     },
     {
@@ -134,7 +149,7 @@ const SidebarBody = () => {
                           key={index}
                           className={` ${
                             index === selectedSublist
-                              ? 'before:content-[""] before:p-[1px] before:py-2 before:w-1 before:rounded-md before:bg-orange-400 before:h-5 before:block'
+                              ? 'before:content-[""] before:p-[1px] before:py-2 before:w-1 before:rounded-md before:bg-orange-400 before:h-5 before:block before:absolute'
                               : ""
                           } flex items-center`}
                           onClick={() => handleSublistItemClick(index)}
