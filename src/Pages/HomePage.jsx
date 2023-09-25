@@ -17,9 +17,7 @@ const HomePage = () => {
       <section className="relative -z-1">
         <Nav />
       </section>
-      <section
-        className="h-full"
-      >
+      <section className="h-full">
         <Outlet />
       </section>
 
@@ -31,12 +29,16 @@ const HomePage = () => {
         <Sidebar />
 
         <div
-          className={`rounded-full h-5 w-5 bg-orange-400 text-white flex justify-center items-center absolute top-[7.5%] ${
+          className={`rounded-full p-1 bg-orange-400 text-white font-extrabold flex justify-center items-center absolute top-[7.5%] ${
             sidebar ? "left-[95%]" : "left-[102%]"
           } cursor-pointer shadow-md`}
           onClick={handleSidebar}
         >
-          {sidebar ? <AiOutlineLeft /> : <AiOutlineRight />}
+          {sidebar ? (
+            <AiOutlineLeft />
+          ) : (
+            <AiOutlineRight />
+          )}
         </div>
       </aside>
     </div>

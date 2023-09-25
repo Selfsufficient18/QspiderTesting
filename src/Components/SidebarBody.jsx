@@ -147,7 +147,7 @@ const SidebarBody = () => {
                       {linkData[activeTab].subList.map((subEle, index) => (
                         <li
                           key={index}
-                          className="no-use"
+                          className="no-use relative"
                           onClick={() => handleSublistItemClick(index)}
                         >
                           <NavLink
@@ -155,8 +155,8 @@ const SidebarBody = () => {
                             // className="ps-3 pe-8 py-1 font-semibold flex items-center justify-between w-full"
                             className={({ isActive }) =>
                               isActive
-                                ? 'before:content-[""] before:p-[1px] before:py-2 before:w-1 before:rounded-md before:bg-orange-400 before:h-5 before:block before:absolute before:left-[35px] flex items-center ps-3 pe-8 py-1 font-semibold justify-between w-full'
-                                : "ps-3 pe-8 py-1 font-semibold flex items-center justify-between w-full "
+                                ? 'realtive before:content-[""] before:p-[1px] before:py-2 before:w-1 before:rounded-md before:bg-orange-400 before:h-5 before:block before:absolute before:left-0 flex items-center ps-3 pe-8 py-1 font-semibold justify-between w-full'
+                                : "ps-3 pe-8 py-1 font-semibold flex items-center justify-between w-full"
                             }
                           >
                             <section>{subEle.subliName}</section>
