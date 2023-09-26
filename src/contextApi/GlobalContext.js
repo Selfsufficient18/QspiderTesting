@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 
 export let ContextProvider = createContext();
 
-
 const GlobalContext = ({ children }) => {
   let [place, setPlace] = useState(true);
   let [notplace, setnotPlace] = useState(false);
@@ -133,10 +132,24 @@ const GlobalContext = ({ children }) => {
 
   let [CBClickedForDrop, setCBclcikedDrop] = useState(false);
 
-  let [CBgetScDrop, setCBGetscDrop] = useState("How to select Checkbox Button ?");
+  let [CBgetScDrop, setCBGetscDrop] = useState(
+    "How to select Checkbox Button ?"
+  );
   let handleCBetRDrop = data => {
     setCBGetscDrop(data);
     setCBclcikedDrop(!CBClickedForDrop);
+  };
+
+  //?---------------
+
+  //? Table
+
+  let [TClickedForDrop, setTclcikedDrop] = useState(false);
+
+  let [TgetScDrop, setTGetscDrop] = useState("How to select a value from cell ?");
+  let handleTetRDrop = data => {
+    setTGetscDrop(data);
+    setTclcikedDrop(!TClickedForDrop);
   };
 
   //?---------------
@@ -172,27 +185,37 @@ const GlobalContext = ({ children }) => {
         getSc,
         handleGetsc,
         scClicked,
+
         select,
         handleSelect,
         searchWithSelect,
         setSearchWithSelect,
         selectDisable,
         setSelectDisable,
+
         scClickedForDrop,
         setSclcikedDrop,
         getScDrop,
         setGetscDrop,
         handleGetscDrop,
+
         RClickedForDrop,
         setRclcikedDrop,
         RgetScDrop,
         setRGetscDrop,
         handleGetRDrop,
+
         CBClickedForDrop,
         setCBclcikedDrop,
         CBgetScDrop,
         setCBGetscDrop,
         handleCBetRDrop,
+
+        TClickedForDrop,
+        setTclcikedDrop,
+        TgetScDrop,
+        setTGetscDrop,
+        handleTetRDrop,
       }}
     >
       {children}

@@ -6,7 +6,7 @@ import { PiToolboxBold } from "react-icons/pi";
 import { LiaHomeSolid } from "react-icons/lia";
 import { FaAngleDown } from "react-icons/fa";
 import { ContextProvider } from "../../contextApi/GlobalContext";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const RightForTable = () => {
   let [clicked, setClicked] = useState(false);
@@ -37,27 +37,35 @@ const RightForTable = () => {
           </p>
           <ul className="text-[15px] font-semibold mt-2 flex flex-col gap-1">
             <div
-              className={
-                !enabled
-                  ? 'w-[185px] text-black flex justify-between items-center py-1 px-2 cursor-pointer poppins after:content-[""] after:p-[1px] after:py-2 after:w-1 after:rounded-md after:bg-orange-400 after:h-5 after:block '
-                  : "w-[185px] flex justify-between items-center py-1  cursor-pointer poppins px-2"
-              }
+              className="no-use"
               onClick={handleEnabled}
             >
-              <Link to={"/table/static-table"} className="font-bold">Static Web Table</Link>
+              <NavLink
+                to={"/table/static-table"}
+                className={({ isActive }) =>
+                  isActive
+                    ? 'w-[185px] text-black flex justify-between items-center py-1 px-2 cursor-pointer poppins after:content-[""] after:p-[1px] after:py-2 after:w-1 after:rounded-md after:bg-orange-400 after:h-5 after:block'
+                    : "w-[185px] flex justify-between items-center py-1 cursor-pointer poppins px-2"
+                }
+              >
+                Static Web Table
+              </NavLink>
             </div>
 
             <div
-              className={
-                disabled
-                  ? 'w-[185px] text-black flex justify-between items-center py-1 px-2 cursor-pointer poppins after:content-[""] after:p-[1px] after:py-2 after:w-1 after:rounded-md after:bg-orange-400 after:h-5 after:block '
-                  : "w-[185px] flex justify-between items-center py-1  cursor-pointer poppins px-2"
-              }
+              className="no-use"
               onClick={handleDisabled}
             >
-              <Link to={"/table/dynamic-table"} className="font-bold whitespace-nowrap overflow-scroll scrollbar scrollbar-none">
+              <NavLink
+                to={"/table/dynamic-table"}
+                className={({ isActive }) =>
+                  isActive
+                    ? 'w-[185px] text-black flex justify-between items-center py-1 px-2 cursor-pointer poppins after:content-[""] after:p-[1px] after:py-2 after:w-1 after:rounded-md after:bg-orange-400 after:h-5 after:block font-bold whitespace-nowrap overflow-scroll scrollbar scrollbar-none'
+                    : "w-[185px] flex justify-between items-center py-1 cursor-pointer poppins px-2 font-bold whitespace-nowrap overflow-scroll scrollbar scrollbar-none"
+                }
+              >
                 Dynamic Web Table
-              </Link>
+              </NavLink>
             </div>
           </ul>
         </div>
