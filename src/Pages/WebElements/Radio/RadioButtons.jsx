@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import toast from 'react-hot-toast';
+import { ContextProvider } from '../../../contextApi/GlobalContext';
 
 const notify = () => toast.success("Successfully Submitted!");
 const RadioButtons = () => {
+
+    let {
+      RClickedForDrop,
+      setRclcikedDrop,
+      RgetScDrop,
+      setRGetscDrop,
+      handleGetRDrop,
+    } = useContext(ContextProvider);
 
       let handleSubmit = e => {
         e.preventDefault();

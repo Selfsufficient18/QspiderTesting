@@ -55,8 +55,7 @@ const GlobalContext = ({ children }) => {
     setEnabled(!enabled);
     setDisabled(false);
   };
-    useEffect(handleEnabled, []);
-
+  useEffect(handleEnabled, []);
 
   // For table
 
@@ -94,25 +93,51 @@ const GlobalContext = ({ children }) => {
   });
 
   let handleEdit = () => {};
-  let handleUpdate = () => { };
-  
-  //? DropDown
-  
+  let handleUpdate = () => {};
+
   let [scClicked, setSclciked] = useState(false);
 
   let [getSc, setGetsc] = useState("How to enter data into Text field ?");
-  let handleGetsc = (data) => {
+  let handleGetsc = data => {
     setGetsc(data);
     setSclciked(!scClicked);
-  }
+  };
 
-    let [scClickedForDrop, setSclcikedDrop] = useState(false);
+  //? DropDown
 
-    let [getScDrop, setGetscDrop] = useState("How to select the value from the single select dropdown ?");
-    let handleGetscDrop = data => {
-      setGetscDrop(data);
-      setSclcikedDrop(!scClickedForDrop);
-    };
+  let [scClickedForDrop, setSclcikedDrop] = useState(false);
+
+  let [getScDrop, setGetscDrop] = useState(
+    "How to select the value from the single select dropdown ?"
+  );
+  let handleGetscDrop = data => {
+    setGetscDrop(data);
+    setSclcikedDrop(!scClickedForDrop);
+  };
+
+  //?---------------
+
+  //? Radio button
+
+  let [RClickedForDrop, setRclcikedDrop] = useState(false);
+
+  let [RgetScDrop, setRGetscDrop] = useState("How to select Radio Button ?");
+  let handleGetRDrop = data => {
+    setRGetscDrop(data);
+    setRclcikedDrop(!RClickedForDrop);
+  };
+
+  //?---------------
+
+  //? checkbox
+
+  let [CBClickedForDrop, setCBclcikedDrop] = useState(false);
+
+  let [CBgetScDrop, setCBGetscDrop] = useState("How to select Checkbox Button ?");
+  let handleCBetRDrop = data => {
+    setCBGetscDrop(data);
+    setCBclcikedDrop(!CBClickedForDrop);
+  };
 
   //?---------------
 
@@ -158,6 +183,16 @@ const GlobalContext = ({ children }) => {
         getScDrop,
         setGetscDrop,
         handleGetscDrop,
+        RClickedForDrop,
+        setRclcikedDrop,
+        RgetScDrop,
+        setRGetscDrop,
+        handleGetRDrop,
+        CBClickedForDrop,
+        setCBclcikedDrop,
+        CBgetScDrop,
+        setCBGetscDrop,
+        handleCBetRDrop,
       }}
     >
       {children}
