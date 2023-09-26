@@ -43,7 +43,7 @@ const SidebarBody = () => {
           subliTo: "",
           path: "table",
         },
-        { subliName: "Dropdown", subliIcon: dropdown, subliTo: "" },
+        { subliName: "Dropdown", subliIcon: dropdown, subliTo: "", path:"dropdown" },
         {
           subliName: "Check Box",
           subliIcon: check,

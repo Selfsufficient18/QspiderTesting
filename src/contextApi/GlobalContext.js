@@ -96,15 +96,33 @@ const GlobalContext = ({ children }) => {
   let handleEdit = () => {};
   let handleUpdate = () => { };
   
-
+  //? DropDown
+  
   let [scClicked, setSclciked] = useState(false);
- 
 
   let [getSc, setGetsc] = useState("How to enter data into Text field ?");
   let handleGetsc = (data) => {
     setGetsc(data);
     setSclciked(!scClicked);
   }
+
+    let [scClickedForDrop, setSclcikedDrop] = useState(false);
+
+    let [getScDrop, setGetscDrop] = useState("How to select the value from the single select dropdown ?");
+    let handleGetscDrop = data => {
+      setGetscDrop(data);
+      setSclcikedDrop(!scClickedForDrop);
+    };
+
+  //?---------------
+
+  let [select, setSelect] = useState(false);
+  let [searchWithSelect, setSearchWithSelect] = useState(false);
+  let [selectDisable, setSelectDisable] = useState(false);
+
+  let handleSelect = () => {
+    setSelect(!select);
+  };
 
   return (
     <ContextProvider.Provider
@@ -129,6 +147,17 @@ const GlobalContext = ({ children }) => {
         getSc,
         handleGetsc,
         scClicked,
+        select,
+        handleSelect,
+        searchWithSelect,
+        setSearchWithSelect,
+        selectDisable,
+        setSelectDisable,
+        scClickedForDrop,
+        setSclcikedDrop,
+        getScDrop,
+        setGetscDrop,
+        handleGetscDrop,
       }}
     >
       {children}

@@ -21,6 +21,8 @@ import Checks from "../Pages/WebElements/Checkbox/Checks";
 import LinkMain from "../Pages/WebElements/Link/LinkMain";
 import LinkFirst from "../Pages/WebElements/Link/LinkFirst";
 import LinkSecond from "../Pages/WebElements/Link/LinkSecond";
+import Dropdown from "../Pages/WebElements/Dropdown";
+import DropdownForm from "../Pages/WebElements/DropdownForm";
 
 // let router = createBrowserRouter([
 //   {
@@ -132,7 +134,7 @@ const QSRoutes = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<HomePage />}> 
+        <Route path="/" element={<HomePage />}>
           <Route path="/text" element={<Text />}>
             <Route index element={<Signup />}></Route>
             <Route path="/text/login" element={<LoginPage />}></Route>
@@ -147,8 +149,6 @@ const QSRoutes = () => {
             <Route path="buttonDisabled" element={<ButtonDisabled />} />
           </Route>
 
-          
-
           <Route path="/table" element={<Table />}>
             <Route index element={<StaticTable />}></Route>
             <Route path="/table/static-table" element={<StaticTable />}></Route>
@@ -157,8 +157,6 @@ const QSRoutes = () => {
               element={<DynamicTable />}
             ></Route>
           </Route>
-
-
 
           <Route path="/radio" element={<RadioButton />}>
             <Route index element={<RadioButtons />}></Route>
@@ -169,10 +167,13 @@ const QSRoutes = () => {
           </Route>
 
           <Route path="/link" element={<LinkMain />}>
-            <Route index  element={<LinkFirst />}></Route>
+            <Route index element={<LinkFirst />}></Route>
             <Route path="/link/second-link" element={<LinkSecond />}></Route>
           </Route>
 
+          <Route path="/dropdown" element={<Dropdown />}>
+            <Route index element={<DropdownForm />}></Route>
+          </Route>
         </Route>
       </Routes>
     </div>

@@ -18,8 +18,6 @@ import Stext from "./Scenarios/Stext";
 
 const Text = () => {
   let [clicked, setClicked] = useState(false);
-
-
   return (
     <>
       <Navbar />
