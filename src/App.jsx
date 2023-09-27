@@ -3,6 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import QSRoutes from "./Routes/QSRoutes";
 import GlobalContext from "./contextApi/GlobalContext";
 import AddTableModal from "./Components/Modals/AddTableModal";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   let [isOpen, setIsOpen] = useState(false);
@@ -10,6 +11,7 @@ const App = () => {
     <GlobalContext>
       <div>
         <BrowserRouter>
+          <Toaster />
           <QSRoutes />
         </BrowserRouter>
       </div>
