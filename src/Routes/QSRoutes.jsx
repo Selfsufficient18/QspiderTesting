@@ -23,6 +23,7 @@ import LinkFirst from "../Pages/WebElements/Link/LinkFirst";
 import LinkSecond from "../Pages/WebElements/Link/LinkSecond";
 import Dropdown from "../Pages/WebElements/Dropdown";
 import DropdownForm from "../Pages/WebElements/DropdownForm";
+import LinkNewTab from './../Pages/WebElements/Link/LinkNewTab';
 
 // let router = createBrowserRouter([
 //   {
@@ -169,6 +170,7 @@ const QSRoutes = () => {
           <Route path="/link" element={<LinkMain />}>
             <Route index element={<LinkFirst />}></Route>
             <Route path="/link/second-link" element={<LinkSecond />}></Route>
+            <Route path="/link/linkNew" element={<LinkNewTab />}></Route>
           </Route>
 
           <Route path="/dropdown" element={<Dropdown />}>

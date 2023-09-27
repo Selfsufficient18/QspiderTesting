@@ -1,8 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import toast from "react-hot-toast";
 import { CiMenuKebab } from "react-icons/ci";
-const LinkSecond = () => {
+const LinkNewTab = () => {
   let [click, setClick] = useState(true);
   let [verify, setVerify] = useState(false);
   return (
@@ -10,7 +9,7 @@ const LinkSecond = () => {
       <aside className="bg-white rounded-md h-[100%] w-[100%] border border-orange-200 shadow-sm shadow-orange-300 p-5 overflow-y-scroll scrollbar scrollbar-w-2 scrollbar-thumb-[#a8a8a8] scrollbar-track-transparent scrollbar-thumb-rounded-md">
         {click ? (
           <section className="absolute top-[-10px] left-[10%] bg-orange-500 w-[80%] p-[8px] px-10 rounded-3xl text-white font-bold capitalize text-[14px] flex justify-center items-center">
-            <p className=" ">How to click on a link text</p>
+            <p className=" ">How to click on a Link text?</p>
           </section>
         ) : null}
         {verify ? (
@@ -21,59 +20,45 @@ const LinkSecond = () => {
           </section>
         ) : null}
         <div className=" rounded-md p-4">
-          <h2 className="font-bold text-[25px] pb-6">Privacy Policy</h2>
+          <h2 className="font-bold text-[25px] pb-6">Terms and Conditions</h2>
           <p className="pb-4 text-[16px] text-slate-600 pe-10">
-            A <span className="font-bold">Privacy Policy</span> is a legal
-            document where you specify if you collect personal data from your
-            users, what kind of personal data you collect, what you do with that
-            data, and other important information about your privacy practices.
+            Help protect your website and its users with clear and fair website
+            terms and conditions. These terms and conditions for a website set
+            out key issues such as acceptable use, privacy, cookies,
+            registration and passwords, intellectual property, links to other
+            sites, termination and disclaimers of responsibility. Terms and
+            conditions are used and necessary to protect a website owner from
+            liability of a user relying on the information or the goods provided
+            from the site then suffering a loss.
           </p>
           <p className="pb-4 text-[16px] text-slate-600 pe-10">
-            In this article we'll discuss a few of the laws that require Privacy
-            Policies, as well as what content you'll need to put in a Privacy
-            Policy when creating one.
+            Making your own terms and conditions for your website is hard, not
+            impossible, to do. It can take a few hours to few days for a person
+            with no legal background to make. But worry no more; we are here to
+            help you out.
           </p>
           <p className="pb-4 text-[16px] text-slate-600 pe-10">
-            A Privacy Policy is required by law if you collect personal data.
-            Personal data is any kind of data or information that can be
-            considered personal (identifies an individual), such as:
+            All you need to do is fill up the blank spaces and then you will
+            receive an email with your personalized terms and conditions.
           </p>
           <p className="pb-4 text-[16px] text-slate-600 pe-10">
-            <ul className="ps-5">
-              <li className="list-disc">Email address </li>
-              <li className="list-disc">First and last name </li>
-              <li className="list-disc">Billing and shipping address</li>
-              <li className="list-disc">Credit card information</li>
-            </ul>
-          </p>
-          <p className="pb-4 text-[16px] text-slate-600 pe-10">
-            A Privacy Policy is a legal statement that specifies what the
-            business owner does with the personal data collected from users,
-            along with how the data is processed and for what purposes.
-          </p>
-          <p className="pb-4 text-[16px] text-slate-600 pe-10">
-            In 1968, Council of Europe did studies on the threat of the Intemet
-            expansion as they were concerned with the effects of technology on
-            human rights. This lead to the development of policies that were to
-            be developed to protect personal data.
-          </p>
-          <p className="pb-4 text-[16px] text-slate-600 pe-10">
-            This marks the start of what we know now as a "Privacy Policy.”
-            While the name "Privacy Policy" refers to the legal agreement, the
-            concept of privacy and protecting user data is closely related
-          </p>
-
-          <section className="flex justify-center mt-2">
             {" "}
-            <button
-              className="bg-orange-600 px-3 py-1 text-white font-bold border-2 border-black"
-              onClick={() => {
-                toast("Thank you for accepting");
-              }}
+            <span className="font-bold text-black">
+              Looking for a Privacy Policy?
+            </span>{" "}
+            Check out
+            <a
+              href="./../newTab.html"
+              target="_blank"
+              className="text-blue-600"
             >
-              Accept Our Policy
-            </button>
-          </section>
+              Privacy Policy Generator.
+            </a>
+          </p>
+          <p className="pb-4 text-[16px] text-slate-600 pe-10">
+            The accuracy of the generated document on this website is not
+            legally binding. Use at your own risk.
+          </p>
         </div>
       </aside>
       <article className="scenarios h-[110px] bg-white rounded-t-[20px] mt-[20px] relative top-2 w-[1020px]">
@@ -97,7 +82,7 @@ const LinkSecond = () => {
                     click ? "text-white" : "text-slate-500"
                   } px-4`}
                 >
-                  How to Click On A Link Text ?
+                  How to Click On A Link text ?
                 </p>
               </aside>
               <CiMenuKebab />
@@ -129,4 +114,4 @@ const LinkSecond = () => {
   );
 };
 
-export default LinkSecond;
+export default LinkNewTab;

@@ -19,7 +19,7 @@ const LinkRightPanel = () => {
   //! List for making the right upper panel
   let exampleList = [
     { listName: "Default Link", path: "link" },
-    { listName: "Link in New Tab", path: "button/buttonRightClick" },
+    { listName: "Link in New Tab", path: "link/linkNew" },
     { listName: "Link gives 1XX", path: "button/buttonDoubleClick" },
     { listName: "Link gives 2XX", path: "button/buttonSubmitClick" },
     { listName: "Link gives 3XX", path: "button/buttonDisabled" },
@@ -50,7 +50,7 @@ const LinkRightPanel = () => {
           <p className="font-bold border-b-2 border-solid text-[20px]">
             Examples
           </p>
-          <ul>
+          <ul className="relative">
             {exampleList &&
               exampleList.length &&
               exampleList.map((ele, index) => {
@@ -59,7 +59,7 @@ const LinkRightPanel = () => {
                     <li
                       className={` ${
                         index === selectedSublist
-                          ? 'w-[185px] text-black flex justify-between items-center py-1 px-2 cursor-pointer poppins after:content-[""] after:p-[1px] after:py-2 after:w-1 after:rounded-md after:bg-orange-400 after:h-5 after:block '
+                          ? 'w-[185px] text-black flex justify-between items-center py-1 px-2 cursor-pointer poppins after:content-[""] after:p-[1px] after:py-2 after:w-1 after:rounded-md after:bg-orange-400 after:absolute after:right-0 after:h-5 after:block whitespace-nowrap overflow-scroll scrollbar scrollbar-none'
                           : "w-[185px] flex justify-between items-center py-1  cursor-pointer poppins px-2"
                       } flex items-center`}
                       onClick={() => handleSublistItemClick(index)}
