@@ -1,3 +1,4 @@
+import { indexOf } from "lodash";
 import { createContext, useEffect, useState } from "react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
@@ -71,28 +72,55 @@ const GlobalContext = ({ children }) => {
         name: "Backend Development Bootcamp",
         website: "https://www.google.com",
         address: "demo address",
-        _id: "12",
+        _id: "2",
         averageCost: "20,000",
       },
       {
         name: "Frontend Development Bootcamp",
         website: "https://www.google.com",
         address: "demo address",
-        _id: "13",
+        _id: "3",
         averageCost: "20,000",
       },
       {
         name: "Database Development Bootcamp",
         website: "https://www.google.com",
         address: "demo address",
-        _id: "14",
+        _id: "4",
         averageCost: "20,000",
       },
     ],
   });
 
-  let handleEdit = () => {};
-  let handleUpdate = () => {};
+
+
+  let handleAdd = newdata => {
+    bootcamps.data.push(newdata);
+  }
+
+  let handleEdit = (id) => {
+    let deleteId = null;
+    bootcamps.data.map(data => {
+      if (data._id === id) {
+        deleteId = bootcamps.data.indexOf(data);
+      }
+    })
+    bootcamps.data.splice(deleteId, 1);
+  };
+
+  let [beforeData, setBeforeData] = useState();
+  let handleUpdate = (id, data) => { 
+    let updateID = null;
+    setBeforeData(data);
+    bootcamps.data.map(data => {
+      if (data._id === id) {
+        updateID = bootcamps.data.indexOf(data);
+      }
+    });
+    bootcamps.data.splice(updateID, 1);
+  };
+ 
+
 
   let [scClicked, setSclciked] = useState(false);
 
@@ -180,6 +208,9 @@ const GlobalContext = ({ children }) => {
         enabled,
         handleEnabled,
         bootcamps,
+        setBootcamps,
+        beforeData,
+        handleAdd,
         handleEdit,
         handleUpdate,
         getSc,

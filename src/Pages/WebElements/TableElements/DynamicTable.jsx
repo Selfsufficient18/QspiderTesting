@@ -3,6 +3,7 @@ import { AiFillDelete, AiFillEdit, AiFillStar } from "react-icons/ai";
 import { ContextProvider } from "../../../contextApi/GlobalContext";
 import _ from "lodash";
 import { NavLink } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom/dist";
 
 const DynamicTable = () => {
   let { bootcamps, handleEdit, handleUpdate } = useContext(ContextProvider);
@@ -18,6 +19,8 @@ const DynamicTable = () => {
     //Clearing the interval
     return () => clearInterval(interval);
   }, [count]);
+
+  let navigate = useNavigate();
 
   return (
     <div className="relative top-4">
@@ -43,9 +46,14 @@ const DynamicTable = () => {
           Readings
         </NavLink>
       </article>
-      <p className="text-[22px] text-orange-600 font-bold py-2 ">
-        Bootcamps Table
-      </p>
+      <article className="flex w-full justify-between items-center">
+        <p className="text-[22px] text-orange-600 font-bold py-2 ">
+          Bootcamps Table
+        </p>
+        <Link to="/table/add" className="bg-orange-600 rounded-md text-white font-bold p-2">
+          Add To Table
+        </Link>
+      </article>
       <div className="relative shadow-md sm:rounded-lg">
         <table className="w-full text-sm text-left text-gray-500 ">
           <thead className="text-xs text-gray-700 uppercase bg-orange-200">
@@ -94,14 +102,19 @@ const DynamicTable = () => {
                     <a
                       href="#"
                       className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      onClick={() => handleUpdate(data._id, { ...data })}
+                      onClick={() => {
+                        navigate("/table/update-table");
+                        return handleUpdate(data._id, data);
+                      }}
                     >
                       <AiFillEdit />
                     </a>
                     <a
                       href="#"
                       className="font-medium text-red-600 dark:text-red-500 hover:underline"
-                      onClick={() => handleEdit(data._id)}
+                      onClick={() => {
+                        return handleEdit(data._id);
+                      }}
                     >
                       <AiFillDelete />
                     </a>

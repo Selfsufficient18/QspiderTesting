@@ -8,12 +8,12 @@ import Signup from "../Pages/WebElements/Signup";
 import Table from "../Pages/WebElements/Table";
 import StaticTable from "../Pages/WebElements/TableElements/StaticTable";
 import DynamicTable from "../Pages/WebElements/TableElements/DynamicTable";
-import ButtonRightClick from './../Pages/WebElements/Buttons/ButtonRightClick';
-import ButtonDoubleClick from './../Pages/WebElements/Buttons/ButtonDouble';
-import ButtonSubmitClick from './../Pages/WebElements/Buttons/ButtonSubmitClick';
-import ButtonDisabled from './../Pages/WebElements/Buttons/ButtonDisabled';
-import ButtonDefault from './../Pages/WebElements/Buttons/ButtonDefault';
-import ButtonMain from './../Pages/WebElements/Buttons/ButtonMain';
+import ButtonRightClick from "./../Pages/WebElements/Buttons/ButtonRightClick";
+import ButtonDoubleClick from "./../Pages/WebElements/Buttons/ButtonDouble";
+import ButtonSubmitClick from "./../Pages/WebElements/Buttons/ButtonSubmitClick";
+import ButtonDisabled from "./../Pages/WebElements/Buttons/ButtonDisabled";
+import ButtonDefault from "./../Pages/WebElements/Buttons/ButtonDefault";
+import ButtonMain from "./../Pages/WebElements/Buttons/ButtonMain";
 import RadioButton from "../Pages/WebElements/RadioButton";
 import RadioButtons from "../Pages/WebElements/Radio/RadioButtons";
 import CheckBox from "../Pages/WebElements/CheckBox";
@@ -23,7 +23,9 @@ import LinkFirst from "../Pages/WebElements/Link/LinkFirst";
 import LinkSecond from "../Pages/WebElements/Link/LinkSecond";
 import Dropdown from "../Pages/WebElements/Dropdown";
 import DropdownForm from "../Pages/WebElements/DropdownForm";
-import LinkNewTab from './../Pages/WebElements/Link/LinkNewTab';
+import LinkNewTab from "./../Pages/WebElements/Link/LinkNewTab";
+import AddDynamic from "../Pages/WebElements/TableElements/AddDynamic";
+import UpdatedDynamic from "../Pages/WebElements/TableElements/UpdatedDynamic";
 
 // let router = createBrowserRouter([
 //   {
@@ -131,7 +133,6 @@ import LinkNewTab from './../Pages/WebElements/Link/LinkNewTab';
 // ]);
 
 const QSRoutes = () => {
-  
   return (
     <div>
       <Routes>
@@ -156,6 +157,11 @@ const QSRoutes = () => {
             <Route
               path="/table/dynamic-table"
               element={<DynamicTable />}
+            ></Route>
+            <Route path="/table/add" element={<AddDynamic />}></Route>
+            <Route
+              path="/table/update-table"
+              element={<UpdatedDynamic />}
             ></Route>
           </Route>
 
