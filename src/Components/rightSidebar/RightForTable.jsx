@@ -41,12 +41,13 @@ const RightForTable = () => {
               onClick={handleEnabled}
             >
               <NavLink
-                to={"/table/static-table"}
+                to={"/table"}
                 className={({ isActive }) =>
                   isActive
                     ? 'w-[185px] text-black flex justify-between items-center py-1 px-2 cursor-pointer poppins after:content-[""] after:p-[1px] after:py-2 after:w-1 after:rounded-md after:bg-orange-400 after:h-5 after:block'
                     : "w-[185px] flex justify-between items-center py-1 cursor-pointer poppins px-2"
                 }
+                end
               >
                 Static Web Table
               </NavLink>

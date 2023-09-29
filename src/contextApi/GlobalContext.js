@@ -9,17 +9,20 @@ const GlobalContext = ({ children }) => {
   let [place, setPlace] = useState(true);
   let [notplace, setnotPlace] = useState(false);
 
+  let [tarea, setTarea] = useState(true);
   let handlePlace = () => {
     setPlace(true);
     setnotPlace(false);
     setTool(false);
     setnottool(false);
+     setTarea(true);
   };
   let handleNotPlace = () => {
     setnotPlace(true);
     setPlace(false);
     setTool(false);
     setnottool(false);
+    setTarea(true);
   };
 
   let [tool, setTool] = useState(false);
@@ -30,17 +33,22 @@ const GlobalContext = ({ children }) => {
     setnottool(false);
     setPlace(false);
     setnotPlace(false);
+    setTarea(true);
   };
   let handleNotTool = () => {
     setnottool(true);
     setTool(false);
     setPlace(false);
     setnotPlace(false);
+    setTarea(true);
   };
 
-  let [tarea, setTarea] = useState(true);
   let handleArea = () => {
-    setTarea(!tarea);
+    setTarea(false);
+    setnotPlace(false);
+    setPlace(false);
+    setTool(false);
+    setnottool(false);
   };
 
   let [disabled, setDisabled] = useState(false);

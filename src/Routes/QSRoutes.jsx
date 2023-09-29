@@ -153,7 +153,7 @@ const QSRoutes = () => {
 
           <Route path="/table" element={<Table />}>
             <Route index element={<StaticTable />}></Route>
-            <Route path="/table/static-table" element={<StaticTable />}></Route>
+
             <Route
               path="/table/dynamic-table"
               element={<DynamicTable />}

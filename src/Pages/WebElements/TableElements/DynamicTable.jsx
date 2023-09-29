@@ -26,16 +26,19 @@ const DynamicTable = () => {
     <div className="relative top-4">
       <article className="font-semibold flex gap-1">
         <NavLink
-          to="/table/static-table"
+          
+          to="/table"
           className={({ isActive }) =>
             isActive
               ? "border-b-[3px] px-1 py-2 border-orange-500 transition-all duration-300 hover:bg-orange-100"
               : "px-1 py-2 transition-all duration-300 hover:bg-orange-100"
           }
+          end
         >
           Boomcaps
         </NavLink>
         <NavLink
+          
           to="/table/dynamic-table"
           className={({ isActive }) =>
             isActive
@@ -94,7 +97,7 @@ const DynamicTable = () => {
                   <td className="px-6 py-4 font-bold text-black">
                     {(() => {
                       return setInterval(() => {
-                        return _.random();
+                        return _.random(9);
                       }, 1000);
                     })()}
                   </td>
