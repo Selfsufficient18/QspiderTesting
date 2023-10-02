@@ -70,32 +70,44 @@ const GlobalContext = ({ children }) => {
   let [bootcamps, setBootcamps] = useState({
     data: [
       {
-        name: "Web Development Bootcamp",
+        name: "Levis Mens Regular Fit Tee",
         website: "https://www.google.com",
         address: "demo address",
         _id: "1",
-        averageCost: "20,000",
+        averageCost: "896",
+        ratings: "4.25 Star",
+       quantity: 2,
+        discount: "23%",
       },
       {
-        name: "Backend Development Bootcamp",
+        name: "SAMSUNG Galaxy Z Flip4",
         website: "https://www.google.com",
         address: "demo address",
         _id: "2",
-        averageCost: "20,000",
+        ratings: "4.25 Star",
+        averageCost: "897",
+       quantity: 2,
+        discount: "30%",
       },
       {
-        name: "Frontend Development Bootcamp",
+        name: "APPLEIPhone 14 Pro",
         website: "https://www.google.com",
         address: "demo address",
         _id: "3",
-        averageCost: "20,000",
+        averageCost: "898",
+        ratings: "4.25 Star",
+       quantity: 2,
+        discount: "23%",
       },
       {
-        name: "Database Development Bootcamp",
+        name: "HP Envy X360 Ryxen 5 Hexa Core 5600U",
         website: "https://www.google.com",
         address: "demo address",
         _id: "4",
-        averageCost: "20,000",
+        averageCost: "899",
+        ratings: "4.25 Star",
+       quantity: 2,
+        discount: "30%",
       },
     ],
   });
@@ -198,9 +210,18 @@ const GlobalContext = ({ children }) => {
     setSelect(!select);
   };
 
+  //? For table
+
+    let [modal, setModal] = useState(false);
+    let handleModal = () => {
+      setModal(true);
+    };
+
   return (
     <ContextProvider.Provider
       value={{
+        modal,
+        handleModal,
         place,
         handlePlace,
         notplace,

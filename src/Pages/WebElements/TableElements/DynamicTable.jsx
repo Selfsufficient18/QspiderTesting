@@ -6,18 +6,21 @@ import { NavLink } from "react-router-dom";
 import { Link, useNavigate } from "react-router-dom/dist";
 
 const DynamicTable = () => {
-  let { bootcamps, handleEdit, handleUpdate } = useContext(ContextProvider);
+  let { bootcamps, handleEdit, handleUpdate, handleModal } =
+    useContext(ContextProvider);
+
+
 
   const [count, setCount] = useState();
 
   useEffect(() => {
     //Implementing the setInterval method
     const interval = setInterval(() => {
-      setCount(_.random(1));
+      setCount(_.random(9));
     }, 1500);
 
     //Clearing the interval
-    return () => clearInterval(interval);
+    
   }, [count]);
 
   let navigate = useNavigate();
@@ -26,7 +29,6 @@ const DynamicTable = () => {
     <div className="relative top-4">
       <article className="font-semibold flex gap-1">
         <NavLink
-          
           to="/table"
           className={({ isActive }) =>
             isActive
@@ -35,10 +37,9 @@ const DynamicTable = () => {
           }
           end
         >
-          Boomcaps
+          Purchased Product
         </NavLink>
         <NavLink
-          
           to="/table/dynamic-table"
           className={({ isActive }) =>
             isActive
@@ -46,14 +47,22 @@ const DynamicTable = () => {
               : "px-1 py-2 transition-all duration-300 hover:bg-orange-100"
           }
         >
-          Readings
+          Favourite Product
         </NavLink>
       </article>
       <article className="flex w-full justify-between items-center">
         <p className="text-[22px] text-orange-600 font-bold py-2 ">
-          Bootcamps Table
+          Your Favourite List - 04
         </p>
-        <Link to="/table/add" className="bg-orange-600 rounded-md text-white font-bold p-2">
+        <Link
+          to="/addToTable"
+          className="bg-orange-600 rounded-md text-white font-bold p-2"
+          onClick={() => {
+            let modal1 = document.getElementById("modal");
+            modal1.classList.add("absolute top-0 left-0 z-[100000000] w-full h-[100vh]");
+            modal1.style.background="rgba(0, 0, 0, 0.41)"
+          }}
+        >
           Add To Table
         </Link>
       </article>
@@ -62,19 +71,19 @@ const DynamicTable = () => {
           <thead className="text-xs text-gray-700 uppercase bg-orange-200">
             <tr>
               <th scope="col" className="px-6 py-3">
-                Name
+                Product name
               </th>
               <th scope="col" className="px-6 py-3">
-                Website
+                Ratings
               </th>
               <th scope="col" className="px-6 py-3">
-                Address
+                Qunatity
               </th>
               <th scope="col" className="px-6 py-3">
-                Average Cost
+                Discount
               </th>
               <th scope="col" className="px-6 py-3">
-                Reg Count
+                Price
               </th>
               <th scope="col" className="px-6 py-3">
                 Action
@@ -91,14 +100,17 @@ const DynamicTable = () => {
                   >
                     {data.name}
                   </th>
-                  <td className="px-6 py-4">{data.website}</td>
-                  <td className="px-6 py-4">{data.address}</td>
-                  <td className="px-6 py-4">{data.averageCost}</td>
+                  <td className="px-6 py-4">{data.ratings}</td>
+                  <td className="px-6 py-4">{data.quantity}</td>
+                  <td className="px-6 py-4">
+                    {(() => {
+                      return Math.floor(Math.random(3000) * 30);
+                    })()}
+                    %
+                  </td>
                   <td className="px-6 py-4 font-bold text-black">
                     {(() => {
-                      return setInterval(() => {
-                        return _.random(9);
-                      }, 1000);
+                      return Math.floor(Math.random(3000) * 800);
                     })()}
                   </td>
                   <td className="flex items-center px-6 py-4 space-x-3">

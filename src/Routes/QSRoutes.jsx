@@ -142,7 +142,7 @@ const QSRoutes = () => {
             <Route path="/text/login" element={<LoginPage />}></Route>
             <Route path="/text/signup" element={<Signup />}></Route>
           </Route>
-
+        
           <Route path="/button" element={<ButtonMain />}>
             <Route index element={<ButtonDefault />} />
             <Route path="buttonRightClick" element={<ButtonRightClick />} />
@@ -158,11 +158,15 @@ const QSRoutes = () => {
               path="/table/dynamic-table"
               element={<DynamicTable />}
             ></Route>
-            <Route path="/table/add" element={<AddDynamic />}></Route>
+
             <Route
               path="/table/update-table"
               element={<UpdatedDynamic />}
             ></Route>
+          </Route>
+
+          <Route path="/addToTable" element={<AddDynamic />}>
+
           </Route>
 
           <Route path="/radio" element={<RadioButton />}>

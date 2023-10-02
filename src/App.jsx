@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import QSRoutes from "./Routes/QSRoutes";
-import GlobalContext from "./contextApi/GlobalContext";
+import GlobalContext, { ContextProvider } from "./contextApi/GlobalContext";
 import AddTableModal from "./Components/Modals/AddTableModal";
 import { Toaster } from "react-hot-toast";
-
 const App = () => {
   let [isOpen, setIsOpen] = useState(false);
+
   return (
     <GlobalContext>
       <div>

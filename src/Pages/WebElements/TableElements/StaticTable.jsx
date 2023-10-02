@@ -19,7 +19,7 @@ const StaticTable = () => {
           }
           end
         >
-          Boomcaps
+          Purchased Product
         </NavLink>
         <NavLink
           to="/table/dynamic-table"
@@ -29,27 +29,30 @@ const StaticTable = () => {
               : "px-1 py-2 transition-all duration-300 hover:bg-orange-100"
           }
         >
-          Readings
+          Favourite Product
         </NavLink>
       </article>
-      <p className="text-[22px] text-orange-600 font-bold py-2 ">
-        Bootcamps Table
+      <p className="text-[22px] text-red-500 font-bold py-2 ">
+        Your Favourite List - 04
       </p>
       <div className="relative shadow-md sm:rounded-lg">
         <table className="w-full text-sm text-left text-gray-500 ">
           <thead className="text-xs text-gray-700 uppercase bg-orange-200">
             <tr>
               <th scope="col" className="px-6 py-3">
-                Name
+                Product name
               </th>
               <th scope="col" className="px-6 py-3">
-                Website
+                Ratings
               </th>
               <th scope="col" className="px-6 py-3">
-                Address
+                Qunatity
               </th>
               <th scope="col" className="px-6 py-3">
-                Average Cost
+                Discount
+              </th>
+              <th scope="col" className="px-6 py-3">
+                Price
               </th>
             </tr>
           </thead>
@@ -63,8 +66,9 @@ const StaticTable = () => {
                   >
                     {data.name}
                   </th>
-                  <td className="px-6 py-4">{data.website}</td>
-                  <td className="px-6 py-4">{data.address}</td>
+                  <td className="px-6 py-4">{data.ratings}</td>
+                  <td className="px-6 py-4">{data.quantity}</td>
+                  <td className="px-6 py-4">{data.discount}</td>
                   <td className="px-6 py-4">{data.averageCost}</td>
                 </tr>
               );
