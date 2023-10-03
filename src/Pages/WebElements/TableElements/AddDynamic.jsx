@@ -45,7 +45,7 @@ const AddDynamic = () => {
           <div className="h-full m-auto flex flex-col justify-center items-center ">
             <form
               onSubmit={handleSubmit}
-              className="flex flex-col gap-4 shadow-md rounded-3xl p-4 px-6 w-[60%] bg-slate-100 relative top-2"
+              className="flex flex-col gap-4 shadow-md rounded-3xl p-4 px-6 w-[30%] bg-slate-100 relative top-2"
             >
               <aside className="flex flex-col">
                 <label htmlFor="" className="font-semibold text-[14px] py-2">
@@ -102,12 +102,11 @@ const AddDynamic = () => {
                   type="submit"
                   onClick={() => {
             let modal1 = document.getElementById("modal");
-            modal1.classList.remove("absolute top-0 left-0 z-[100000000] w-full h-[100vh]");
+            modal1.setAttribute("class","");
             modal1.style.background="rgba(0, 0, 0, 0.41)"
                     return handleSubmit;
                   }}
-                  className="p-2 px-6 bg-orange-500 rounded-md text-white font-bold"
-                  
+                  className="p-2 px-6 bg-orange-500 rounded-md text-white font-bold hover:bg-orange-700 transition-all duration-300"
                 >
                   Add Data
                 </button>

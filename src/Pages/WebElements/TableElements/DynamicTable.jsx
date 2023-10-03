@@ -55,12 +55,15 @@ const DynamicTable = () => {
           Your Favourite List - 04
         </p>
         <Link
-          to="/addToTable"
+          to="/table/addToTable"
           className="bg-orange-600 rounded-md text-white font-bold p-2"
           onClick={() => {
             let modal1 = document.getElementById("modal");
-            modal1.classList.add("absolute top-0 left-0 z-[100000000] w-full h-[100vh]");
-            modal1.style.background="rgba(0, 0, 0, 0.41)"
+            modal1.setAttribute(
+              "class",
+              "absolute top-0 left-0 z-[100000000] w-full h-[100vh]"
+            );
+            modal1.style.background = "rgba(0, 0, 0, 0.41)";
           }}
         >
           Add To Table
