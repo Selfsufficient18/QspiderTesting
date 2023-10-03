@@ -33,11 +33,6 @@ const AddDynamic = () => {
     navigate("/table/dynamic-table");
   };
 
-  let ModalAdd = () => {
-    
-    
-  }
-
   return (
     <>
       {createPortal(

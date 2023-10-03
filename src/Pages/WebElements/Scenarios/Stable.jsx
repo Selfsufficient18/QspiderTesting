@@ -32,7 +32,7 @@ const Stable = () => {
                 ref={Rfref}
               >
                 {window.location.href ===
-                "http://localhost:3000/table/static-table"
+                "http://localhost:3000/table"
                   ? "How to select a value from cell ?"
                   : "How to select a Dynamic cell value"}
               </p>

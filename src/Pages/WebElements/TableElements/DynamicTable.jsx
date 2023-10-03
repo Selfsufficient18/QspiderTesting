@@ -121,6 +121,12 @@ const DynamicTable = () => {
                       href="#"
                       className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                       onClick={() => {
+                        let modal1 = document.getElementById("updateModal");
+                        modal1.setAttribute(
+                          "class",
+                          "absolute top-0 left-0 z-[100000000] w-full h-[100vh]"
+                        );
+                        modal1.style.background = "rgba(0, 0, 0, 0.41)";
                         navigate("/table/update-table");
                         return handleUpdate(data._id, data);
                       }}
