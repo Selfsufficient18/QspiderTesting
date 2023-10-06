@@ -124,7 +124,7 @@ const DynamicTable = () => {
                         let modal1 = document.getElementById("updateModal");
                         modal1.setAttribute(
                           "class",
-                          "absolute top-0 left-0 z-[100000000] w-full h-[100vh]"
+                          "absolute top-0 left-0 z-[100000000] block w-full h-full"
                         );
                         modal1.style.background = "rgba(0, 0, 0, 0.41)";
                         navigate("/table/update-table");

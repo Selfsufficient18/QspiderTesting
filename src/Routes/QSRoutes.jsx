@@ -26,6 +26,8 @@ import DropdownForm from "../Pages/WebElements/DropdownForm";
 import LinkNewTab from "./../Pages/WebElements/Link/LinkNewTab";
 import AddDynamic from "../Pages/WebElements/TableElements/AddDynamic";
 import UpdatedDynamic from "../Pages/WebElements/TableElements/UpdatedDynamic";
+import DatePicking from "../Pages/DatePickers/DatePicking";
+import MainFrame from "../Pages/IFrames/MainFrame";
 
 // let router = createBrowserRouter([
 //   {
@@ -137,6 +139,11 @@ const QSRoutes = () => {
     <div>
       <Routes>
         <Route path="/" element={<HomePage />}>
+          <Route path="/" element={<Text />}>
+            <Route index element={<Signup />}></Route>
+            
+          </Route>
+
           <Route path="/text" element={<Text />}>
             <Route index element={<Signup />}></Route>
             <Route path="/text/login" element={<LoginPage />}></Route>
@@ -185,6 +192,10 @@ const QSRoutes = () => {
             <Route index element={<DropdownForm />}></Route>
           </Route>
         </Route>
+
+        <Route path="/date" element={<DatePicking />}></Route>
+
+        <Route path="/iframes" element={<MainFrame />}></Route>
       </Routes>
     </div>
   );

@@ -34,16 +34,27 @@ const SidebarBody = () => {
       icon: "",
       linkTo: "/",
       subList: [
-        { subliName: "Text Box", subliIcon: textbox, subliTo: "", path: "text" },
+        {
+          subliName: "Text Box",
+          subliIcon: textbox,
+          subliTo: "",
+          path: "text",
+        },
+        
         { subliName: "Button", subliIcon: button, subliTo: "", path: "button" },
-        { subliName: "Link", subliIcon: external, subliTo: "", path:"link" },
+        { subliName: "Link", subliIcon: external, subliTo: "", path: "link" },
         {
           subliName: "Web Table",
           subliIcon: table,
           subliTo: "",
           path: "table",
         },
-        { subliName: "Dropdown", subliIcon: dropdown, subliTo: "", path:"dropdown" },
+        {
+          subliName: "Dropdown",
+          subliIcon: dropdown,
+          subliTo: "",
+          path: "dropdown",
+        },
         {
           subliName: "Check Box",
           subliIcon: check,
@@ -68,7 +79,9 @@ const SidebarBody = () => {
       linkName: "Date-Picker",
       icon: "",
       linkTo: "/",
-      subList: [{ subliName: "Text Box", subliIcon: "", subliTo: "" }],
+      subList: [
+        { subliName: "date", subliIcon: "", subliTo: "", path: "date" },
+      ],
     },
     {
       linkName: "Alerts",
@@ -92,7 +105,9 @@ const SidebarBody = () => {
       linkName: "Frames",
       icon: "",
       linkTo: "/",
-      subList: [{ subliName: "Text Box", subliIcon: "", subliTo: "" }],
+      subList: [
+        { subliName: "Text Box", subliIcon: "", subliTo: "", path: "/iframes" },
+      ],
     },
     {
       linkName: "Shadow Root Elements",
@@ -151,7 +166,7 @@ const SidebarBody = () => {
                           onClick={() => handleSublistItemClick(index)}
                         >
                           <NavLink
-                            to={`/${subEle.path}`}
+                            to={`/${subEle.path}` || `/`}
                             // className="ps-3 pe-8 py-1 font-semibold flex items-center justify-between w-full"
                             className={({ isActive }) =>
                               isActive

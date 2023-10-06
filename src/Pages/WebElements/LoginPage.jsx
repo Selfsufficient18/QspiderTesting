@@ -195,7 +195,7 @@ const LoginPage = () => {
                   Login
                 </button>
                 <Link
-                  to="/signup"
+                  to="/text/signup"
                   className="text-[12px] font-sans font-bold text-slate-500 relative top-3 hover:text-slate-700 cursor-pointer"
                 >
                   Don't have an account ? Register Now

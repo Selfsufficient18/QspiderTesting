@@ -8,7 +8,7 @@ const UpdatedDynamic = () => {
     useContext(ContextProvider);
   console.log(bootcamps);
 
-  let [newdata, setNewdata] = useState({...beforeData});
+  let [newdata, setNewdata] = useState({ ...beforeData });
 
   let { name, website, address, _id, averageCost, ratings, quantity } = newdata;
 
@@ -29,7 +29,19 @@ const UpdatedDynamic = () => {
     <>
       {createPortal(
         <>
-          <div className="h-full m-auto flex flex-col justify-center items-center ">
+          <div className="h-full m-auto flex flex-col justify-center items-center">
+            <main
+              className="absolute top-0 left-0 w-full h-full"
+              onClick={() => {
+                let modal1 = document.getElementById("updateModal");
+                modal1.setAttribute("class", "");
+                modal1.style.background = "rgba(0, 0, 0, 0.41)";
+                navigate("/table/dynamic-table");
+                handleAdd(newdata);
+              }}
+            >
+              ulalala
+            </main>
             <form
               onSubmit={handleSubmit}
               className="flex flex-col gap-4 shadow-md rounded-3xl p-4 px-6 w-[30%] bg-slate-100 relative top-2"
